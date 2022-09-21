@@ -12,11 +12,20 @@ namespace PizzaFactoryTWO
         {
 
         }
-        public void PreparePizzas(IList<IPizza> pizzas)
+        public void preparePizzas(IList<IPizza> pizzas)
         {
             foreach (IPizza ipizza in pizzas)
             {
-                ipizza.Prepare();
+                ipizza.prepare();
+            }
+        }
+
+        public void getDeliveryDetails(IList<IDelivery> deliveries)
+        {
+            foreach (IDelivery idelivery in deliveries)
+            {
+                idelivery.canDeliver();
+                idelivery.getDeliveryType();
             }
         }
     }

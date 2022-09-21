@@ -4,18 +4,29 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+
+            Console.WriteLine("Hello, Pizza World!");
 
             DeepDishPizza ddp = new DeepDishPizza();
             StuffedCrustPizza scp = new StuffedCrustPizza();
 
-            List<IPizza> ipizzas = new List<IPizza>();
+            Order order1 = new Order(001, "01/12/2022", scp);
 
-            ipizzas.Add(scp);
-            ipizzas.Add(ddp);
+            order1.showOrderDetails();
 
-            PizzaFactory pf2 = new PizzaFactory();
-            pf2.PreparePizzas(ipizzas);
+
+            //List<IPizza> ipizzas = new List<IPizza>();
+            //List<IDelivery> ideliveries = new List<IDelivery>();
+
+            //ipizzas.Add(scp);
+            //ipizzas.Add(ddp);
+
+            //ideliveries.Add(scp);
+            //ideliveries.Add(ddp);
+
+            //PizzaFactory pf2 = new PizzaFactory();
+            //pf2.preparePizzas(ipizzas);
+            //pf2.getDeliveryDetails(ideliveries);
         }
     }
 }

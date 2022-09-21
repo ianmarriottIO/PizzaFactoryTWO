@@ -6,12 +6,27 @@ using System.Threading.Tasks;
 
 namespace PizzaFactoryTWO
 {
-    internal class StuffedCrustPizza : IPizza
+    public class StuffedCrustPizza : Pizza, IPizza, IDelivery
     {
-        public void Prepare()
+        public override string name { get; set; }
+
+        public StuffedCrustPizza()
         {
-            // Set settings in system for stuffed crust preparations
+            name = "Stuffed Crust";
+        }
+
+        public void prepare()
+        {
             Console.WriteLine("Preparing stuffed crust pizza");
+        }
+        public void canDeliver()
+        {
+            Console.WriteLine("Your pizza can be delivered.");
+        }
+
+        public void getDeliveryType()
+        {
+            Console.WriteLine("We will deliver your pizza by car.");
         }
     }
 }

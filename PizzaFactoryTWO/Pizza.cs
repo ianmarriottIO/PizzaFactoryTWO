@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace PizzaFactoryTWO
 {
-    public interface IPizza
+    public abstract class Pizza
     {
-        void prepare();
-    }
+        public abstract string name { get; set; }
 
-    public interface IDelivery
-    {
-        void canDeliver();
-        void getDeliveryType();
     }
 }
