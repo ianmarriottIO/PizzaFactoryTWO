@@ -9,11 +9,17 @@ namespace PizzaFactoryTWO
     public interface IPizza
     {
         void prepare();
+        void displayToppings();
     }
 
     public interface IDelivery
     {
         void canDeliver();
         void getDeliveryType();
+    }
+
+    public interface IOrder
+    {
+        void showOrderDetails();
     }
 }

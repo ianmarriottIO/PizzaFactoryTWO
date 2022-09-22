@@ -9,6 +9,16 @@ namespace PizzaFactoryTWO
     public abstract class Pizza
     {
         public abstract string name { get; set; }
+        public abstract List<string> toppings { get; set; }
 
+        public void displayToppings(List<string> toppings)
+        {
+            foreach (var topping in toppings)
+            {
+                Console.WriteLine(topping);
+            }
+        }
     }
+
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PizzaFactoryTWO
 {
-    public class Order
+    public class Order: IOrder
     {
         public int id { get; set; }
         public string date { get; set; }
@@ -22,6 +22,9 @@ namespace PizzaFactoryTWO
         public void showOrderDetails()
         {
             Console.WriteLine("ID: " + id + " Date: " + date + " Pizza: " + pizza.name);
+            Console.WriteLine(pizza.name+" Toppings: ");
+            //pizza.toppings.ForEach(topping => Console.WriteLine(topping));
+            pizza.displayToppings(pizza.toppings);
         }
     }
 }

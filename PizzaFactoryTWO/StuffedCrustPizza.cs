@@ -10,9 +10,25 @@ namespace PizzaFactoryTWO
     {
         public override string name { get; set; }
 
+        public override List<string> toppings { get; set; }
+
+
         public StuffedCrustPizza()
         {
             name = "Stuffed Crust";
+            toppings = new List<string>();
+            addDefaultToppings();
+        }
+
+        public void addDefaultToppings()
+        {
+            toppings.Add("Tomato");
+            toppings.Add("Peppers");
+            toppings.Add("Olives");
+        }
+        public void displayToppings()
+        {
+  
         }
 
         public void prepare()

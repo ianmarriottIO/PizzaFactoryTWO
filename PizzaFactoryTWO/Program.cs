@@ -11,8 +11,11 @@
             StuffedCrustPizza scp = new StuffedCrustPizza();
 
             Order order1 = new Order(001, "01/12/2022", scp);
+            Order order2 = new Order(002, "01/12/2022", ddp);
 
             order1.showOrderDetails();
+            order2.showOrderDetails();
+
 
 
             //List<IPizza> ipizzas = new List<IPizza>();
